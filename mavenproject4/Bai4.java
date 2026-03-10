@@ -1,0 +1,42 @@
+package com.example.mavenproject4;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class Bai4 extends Application {
+
+    @Override
+    public void start(Stage stage) {
+
+        TextField celsius = new TextField();
+        celsius.setPromptText("Nhập độ C");
+
+        Button convert = new Button("Chuyển đổi");
+
+        Label result = new Label("Kết quả:");
+
+        convert.setOnAction(e -> {
+            double c = Double.parseDouble(celsius.getText());
+            double f = c * 9 / 5 + 32;
+            result.setText("Fahrenheit: " + f);
+        });
+
+        VBox root = new VBox(10);
+        root.getChildren().addAll(celsius, convert, result);
+
+        Scene scene = new Scene(root, 300, 200);
+
+        stage.setTitle("Chuyển đổi nhiệt độ");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+}
