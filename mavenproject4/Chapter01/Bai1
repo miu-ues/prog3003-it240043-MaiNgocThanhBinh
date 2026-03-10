@@ -4,7 +4,6 @@ package Chapter01;
 public class Bai1 {
     public static void main(String[] args) {
 
-        // Tạo TreeSet
         TreeSet<String> names = new TreeSet<>();
 
         names.add("John");
@@ -20,3 +19,4 @@ public class Bai1 {
         System.out.println("Phần tử cuối cùng: " + names.last());
     }
 }
+
