@@ -1,0 +1,17 @@
+package chapter02;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Bai2 computer1 = new Bai2.ComputerBuilder("1TB", "16GB")
+                .setBluetoothEnabled(true)
+                .build();
+
+        Bai2 computer2 = new Bai2.ComputerBuilder("500GB", "8GB")
+                .build();
+
+        System.out.println("Computer 1 Bluetooth: " + computer1.isBluetoothEnabled());
+        System.out.println("Computer 2 Bluetooth: " + computer2.isBluetoothEnabled());
+    }
+}
